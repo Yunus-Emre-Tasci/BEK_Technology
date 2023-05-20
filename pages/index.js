@@ -6,6 +6,7 @@ import Story from "@/components/Story";
 import Sidebar from "@/components/Sidebar";
 import Content from "@/components/Content";
 
+import Head from "next/head";
 
 const Home=({items})=>{
 
@@ -26,6 +27,9 @@ const Home=({items})=>{
 
   return (
 <main className="w-[80%] mx-auto border" >
+  <Head>
+    <title>Home | BEK Technology</title>
+  </Head>
   < Story thumbnailUrls = {
     thumbnailUrls
   }
