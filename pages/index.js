@@ -1,5 +1,8 @@
 // import { fetchData } from "@/API"
 // import { useEffect, useState } from "react"
+import {
+  GiHamburgerMenu
+} from "react-icons/gi"
 
 import Image from "next/image";
 
@@ -63,10 +66,22 @@ export default function Home({
     }
   </div>
   <div className="flex h-full p-2">
-    <div div className = "w-[80%] h-screen bg-red-400 " >
-    RED
+    <div className = "w-[80%] h-screen bg-red-400 grid grid-cols-3 gap-2 " >
+    <div className="col-span-3 bg-blue-300" ></div>
+    <div className="col-span-2 bg-purple-400"></div>
+    <div className="bg-black"></div>
+    <div className="col-span-2 bg-purple-400"></div>
+    <div className="bg-black"></div>
   </div>
-  <div className=" w-[20%] h-screen bg-yellow-400 " >YELLOW </div>
+  <div className=" w-[20%] h-screen bg-yellow-400 ">
+    <div className="h-[33%]">
+      <div className="flex items-center justify-between p-2 mx-1 border border-gray-400">
+        <h4>Menü</h4>
+        < span className="" > < GiHamburgerMenu /> </span>
+      </div>
+    </div>
+    <div className="mx-2 bg-zinc-900 h-[200px] mt-2">Placeholder</div>
+  </div>
   </div>
   
 </main> 
