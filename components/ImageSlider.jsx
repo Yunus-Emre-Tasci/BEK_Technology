@@ -21,7 +21,7 @@ const ImageSlider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 5000);
+    }, 4000);
 
     return () => {
       clearInterval(interval);
@@ -42,25 +42,12 @@ const ImageSlider = () => {
           }`}
         />
       ))}
-
-      {/* <button
-        className="absolute left-0 px-3 py-1 text-white transform -translate-y-1/2 bg-gray-800 top-1/2 rounded-l-md"
-        onClick={previousSlide}
-      >
-        Previous
-      </button> */}
       <div
-        onClick={nextSlide}
+        onClick={previousSlide}
         className="cursor-pointer absolute left-0 top-[50%] px-1"
       >
         <AiOutlineArrowLeft />
       </div>
-      {/* <button
-        className="absolute right-0 px-3 py-1 text-white transform -translate-y-1/2 bg-gray-800 top-1/2 rounded-r-md"
-        onClick={nextSlide}
-      >
-        Next
-      </button> */}
       <div
         onClick={nextSlide}
         className="cursor-pointer px-1 absolute right-0 top-[50%]"

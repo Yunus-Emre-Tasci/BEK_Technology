@@ -1,12 +1,12 @@
 import { GiHamburgerMenu } from "react-icons/gi";
 import ImageSlider from "./ImageSlider";
 
-const Sidebar = ({ toggleMenu }) => {
+const Sidebar = ({ toggleMenu, isOpen }) => {
   return (
     <div className=" w-[20%] h-screen ">
       <div className="h-[33%]">
         <div className="flex items-center justify-between p-2 mx-1 border border-gray-400 rounded-sm shadow-md">
-          <h4>Menü</h4>
+          <h4 className="font-bold">Menü</h4>
           <span className="cursor-pointer" onClick={toggleMenu}>
             {" "}
             <GiHamburgerMenu />{" "}
@@ -39,7 +39,7 @@ const Sidebar = ({ toggleMenu }) => {
           </div>
         )}
       </div>
-      <div className="mx-2  h-[200px] mt-2">
+      <div className="mx-2 h-[200px] mt-2">
         <ImageSlider />
       </div>
     </div>
