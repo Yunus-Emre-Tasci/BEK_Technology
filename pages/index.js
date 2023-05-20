@@ -1,10 +1,31 @@
 // import { fetchData } from "@/API"
 // import { useEffect, useState } from "react"
 import {
+  useState
+} from "react";
+import {
   GiHamburgerMenu
 } from "react-icons/gi"
 
 import Image from "next/image";
+import ImageSlider from "@/components/ImageSlider";
+
+const images = [{
+    id: 1,
+    src: "https://bek.org.tr/files/img/bwxumoow.jpg",
+    alt: "Image 1",
+  },
+  {
+    id: 2,
+    src: "https://via.placeholder.com/500",
+    alt: "Image 2",
+  },
+  {
+    id: 3,
+    src: "https://via.placeholder.com/500",
+    alt: "Image 3",
+  },
+];
 
 export async function getStaticProps() {
   const response = await fetch('https://jsonplaceholder.typicode.com/photos');
@@ -23,6 +44,12 @@ export async function getStaticProps() {
 export default function Home({
   items
 }) {
+
+  const [isOpen, setIsOpen] = useState(true);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   console.log(items);
  
@@ -73,14 +100,28 @@ export default function Home({
     <div className="col-span-2 bg-purple-400"></div>
     <div className="bg-black"></div>
   </div>
-  <div className=" w-[20%] h-screen bg-yellow-400 ">
+  <div className=" w-[20%] h-screen ">
     <div className="h-[33%]">
-      <div className="flex items-center justify-between p-2 mx-1 border border-gray-400">
+      <div className="flex items-center justify-between p-2 mx-1 border border-gray-400 rounded-sm">
         <h4>Menü</h4>
-        < span className="" > < GiHamburgerMenu /> </span>
+        < span className="cursor-pointer" onClick={toggleMenu} > < GiHamburgerMenu /> </span>
       </div>
+      {isOpen ? (
+        <div className="flex flex-col px-1 pt-1 gap-y-1">
+        <button className="border border-gray-500 rounded-md">Formlar</button> 
+        <button className="border rounded-md ">Faydalı Linkler</button> 
+        <button className="border rounded-md ">Araçlar</button> 
+        <button className="border rounded-md ">E-Fatura</button> 
+        <button className="border rounded-md ">Sizi Dinliyoruz</button> 
+        <button className="border rounded-md ">BEK Akademi</button> 
+      </div>
+      ) : (<h2>BEK TEKNOLOJİ</h2>) }  
     </div>
-    <div className="mx-2 bg-zinc-900 h-[200px] mt-2">Placeholder</div>
+    <div className="mx-2  h-[200px] mt-2">
+      < ImageSlider images = {
+        images
+      }/>
+    </div>
   </div>
   </div>
   
