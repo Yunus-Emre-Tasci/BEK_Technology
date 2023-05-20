@@ -17,13 +17,18 @@ const images = [{
   },
   {
     id: 2,
-    src: "https://via.placeholder.com/500",
+    src: "https://www.farmasigorta.com/Images/static/farmasigorta.png",
     alt: "Image 2",
   },
   {
     id: 3,
-    src: "https://via.placeholder.com/500",
+    src: "https://bek.org.tr/files/img/m5mm02pt.jpg",
     alt: "Image 3",
+  },
+  {
+    id: 4,
+    src: "https://bek.org.tr/files/img/xyufwrrn.jpg",
+    alt: "Image 4",
   },
 ];
 
@@ -102,20 +107,24 @@ export default function Home({
   </div>
   <div className=" w-[20%] h-screen ">
     <div className="h-[33%]">
-      <div className="flex items-center justify-between p-2 mx-1 border border-gray-400 rounded-sm">
+      < div className = "flex items-center justify-between p-2 mx-1 border border-gray-400 rounded-sm shadow-md" >
         <h4>Menü</h4>
         < span className="cursor-pointer" onClick={toggleMenu} > < GiHamburgerMenu /> </span>
       </div>
       {isOpen ? (
-        <div className="flex flex-col px-1 pt-1 gap-y-1">
-        <button className="border border-gray-500 rounded-md">Formlar</button> 
-        <button className="border rounded-md ">Faydalı Linkler</button> 
-        <button className="border rounded-md ">Araçlar</button> 
-        <button className="border rounded-md ">E-Fatura</button> 
-        <button className="border rounded-md ">Sizi Dinliyoruz</button> 
-        <button className="border rounded-md ">BEK Akademi</button> 
+        <div className = "flex flex-col px-1 pt-1 text-xs gap-y-1 sm:text-xs md:text-xs lg:text-sm" >
+        <button className="border border-gray-500 rounded-md sm:py-[0.15rem] shadow-md ">Formlar</button> 
+        <button className="border border-gray-500 rounded-md sm:py-[0.15rem] shadow-md ">Faydalı Linkler</button> 
+        <button className="border border-gray-500 rounded-md sm:py-[0.15rem] shadow-md ">Araçlar</button> 
+        <button className="border border-gray-500 rounded-md sm:py-[0.15rem] shadow-md ">E-Fatura</button> 
+        <button className="border border-gray-500 rounded-md sm:py-[0.15rem] shadow-md ">Sizi Dinliyoruz</button> 
+        <button className="border border-gray-500 rounded-md sm:py-[0.15rem] shadow-md ">BEK Akademi</button> 
       </div>
-      ) : (<h2>BEK TEKNOLOJİ</h2>) }  
+      ) : (
+        <div className="w-full h-full text-center text-blue-600">
+          <h2>BEK TEKNOLOJİ</h2>
+        </div>
+      ) }  
     </div>
     <div className="mx-2  h-[200px] mt-2">
       < ImageSlider images = {
