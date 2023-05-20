@@ -1,8 +1,9 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
+import {images} from "../Data"
 
-const ImageSlider = ({ images }) => {
+const ImageSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const previousSlide = () => {
