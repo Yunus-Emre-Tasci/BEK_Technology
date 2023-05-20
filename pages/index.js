@@ -4,6 +4,7 @@ import { getStaticProps } from "@/API";
 
 import Story from "@/components/Story";
 import Sidebar from "@/components/Sidebar";
+import Content from "@/components/Content";
 
 
 const Home=({items})=>{
@@ -30,13 +31,10 @@ const Home=({items})=>{
   }
   />
   <div className="flex h-full p-2">
-    <div className = "w-[80%] h-screen bg-red-400 grid grid-cols-3 gap-2 " >
-    <div className="col-span-3 bg-blue-300" ></div>
-    <div className="col-span-2 bg-purple-400"></div>
-    <div className="bg-black"></div>
-    <div className="col-span-2 bg-purple-400"></div>
-    <div className="bg-black"></div>
-  </div>
+    < Content urls = {
+      urls
+    }
+    />
   < Sidebar toggleMenu = {
     toggleMenu
   }
