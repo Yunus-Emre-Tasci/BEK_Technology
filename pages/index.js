@@ -26,26 +26,16 @@ const Home=({items})=>{
   
 
   return (
-<main className="w-[80%] mx-auto border" >
+<main className="w-[80%] mx-auto " >
   <Head>
     <title>Home | BEK Technology</title>
   </Head>
-  < Story thumbnailUrls = {
-    thumbnailUrls
-  }
-  />
+  
+  <Story thumbnailUrls = {thumbnailUrls}/>
+  
   <div className="flex h-full p-2">
-    < Content urls = {
-      urls
-    }
-    />
-  < Sidebar toggleMenu = {
-    toggleMenu
-  }
-  isOpen = {
-    isOpen
-  }
-  />
+    <Content urls = {urls}/>
+    <Sidebar toggleMenu = {toggleMenu} isOpen = {isOpen}/>
   </div>
   
 </main> 

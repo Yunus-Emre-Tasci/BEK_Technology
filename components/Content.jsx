@@ -5,7 +5,7 @@ const Content = ({ urls }) => {
   return (
     <div className="w-[80%] h-screen  grid grid-cols-3 gap-2 ">
       <div className="relative col-span-3 ">
-        <Link href="reklam">
+        <Link href="sponsor">
           <Image
             src={urls[0]}
             fill
@@ -17,7 +17,7 @@ const Content = ({ urls }) => {
         </Link>
       </div>
       <div className="relative col-span-2 ">
-        <Link href="reklam">
+        <Link href="sponsor">
           <Image
             src={urls[1]}
             fill
@@ -29,7 +29,7 @@ const Content = ({ urls }) => {
         </Link>
       </div>
       <div className="relative">
-        <Link href="reklam">
+        <Link href="sponsor">
           <Image
             src={urls[2]}
             fill
@@ -41,7 +41,7 @@ const Content = ({ urls }) => {
         </Link>
       </div>
       <div className="relative col-span-2">
-        <Link href="reklam">
+        <Link href="sponsor">
           <Image
             src={urls[3]}
             fill
@@ -53,7 +53,7 @@ const Content = ({ urls }) => {
         </Link>
       </div>
       <div className="relative">
-        <Link href="reklam">
+        <Link href="sponsor">
           <Image
             src={urls[4]}
             fill
