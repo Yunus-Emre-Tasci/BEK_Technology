@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Story = ({ thumbnailUrls }) => {
   return (
-    <div className="flex p-6 overflow-x-auto gap-x-3">
+    <div className="flex px-5 py-3 mt-1 overflow-x-auto gap-x-3">
       {thumbnailUrls.map((thumb, i) => (
         <div key={i} className="text-center cursor-pointer">
           <div className="w-[60px] h-[60px]">
@@ -14,7 +14,7 @@ const Story = ({ thumbnailUrls }) => {
               alt="thumb"
             />
           </div>
-          <p>Story {i + 1} </p>
+          <p className="mt-2">Story {i + 1} </p>
         </div>
       ))}
     </div>

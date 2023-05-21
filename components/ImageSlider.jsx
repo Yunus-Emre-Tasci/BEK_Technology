@@ -2,6 +2,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import {images} from "../Data"
+import Link from "next/link";
 
 const ImageSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -31,16 +32,17 @@ const ImageSlider = () => {
   return (
     <div className="relative w-full h-full mt-3 shadow-md">
       {images.map((image, index) => (
-        <Image
-          key={image.id}
-          fill
-          style={{ objectFit: "contain" }}
-          src={image.src}
-          alt={image.alt}
-          className={`absolute transition-opacity duration-500 ${
-            index === currentSlide ? "opacity-100" : "opacity-0"
-          }`}
-        />
+        <Link key={image.id} href="https://bek.org.tr/kuruluslar/bek-teknoloji" target="_blank" >
+          <Image
+            fill
+            style={{ objectFit: "contain" }}
+            src={image.src}
+            alt={image.alt}
+            className={`absolute transition-opacity duration-500 ${
+              index === currentSlide ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        </Link>
       ))}
       <div
         onClick={previousSlide}
