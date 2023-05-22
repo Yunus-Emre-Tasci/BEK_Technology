@@ -1,12 +1,13 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
+// import Image from 'next/image'
+// import Link from 'next/link'
 import React from 'react'
-import { AiFillPlayCircle } from 'react-icons/ai'
+// import { AiFillPlayCircle } from 'react-icons/ai'
 import {
   getStaticProps
 } from "@/API";
-import SponsorCard from '@/components/SponsorCard'
+import SponsorContent from '@/components/SponsorContent';
+// import SponsorCard from '@/components/SponsorCard'
 
 const Sponsor = ({
     items
@@ -61,42 +62,10 @@ const Sponsor = ({
         <title>Sponsor | BEK Technology</title>
       </Head>
 
-      <div className='pb-2 border-b-2'>
-      <Link className = 'inline-block pl-2 '
-      href = "https://bek.org.tr/kuruluslar/bek-teknoloji"
-      target = "_blank" >
-          <Image
-          width={100}
-          height={100}
-          priority = {
-            true
-          }
-           style = {
-             {
-               objectFit: "contain"
-             }
-           }
-            src = "https://bek.org.tr/files/img/2fz5fyhs.jpg"
-            alt=""
-          />
-      </Link>
-      <div className = 'flex items-center justify-between px-2 mt-4' >
-        <Link href = "/"
-        className = 'flex items-center justify-center px-3 py-2 border-2 border-gray-300 rounded-lg shadow-md' >
-        < AiFillPlayCircle/>
-        <p className='ml-2'>Ana Ekrana Dön</p>
-        </Link>
-        <p className='tracking-wide'>Sponsorlar Ürün Listesi</p>
+      <div className = 'pb-2 border-b-2'>
+       <SponsorContent sponsorData = {sponsorData}/>
       </div>
-      </div>
-      
-      <div className = 'flex flex-wrap mt-3 gap-x-6 gap-y-4' >
-        {
-          sponsorData.map((sponsor,i)=>(
-            <SponsorCard key={i} sponsor={sponsor} />
-          ))
-        }
-      </div>
+
       <div className='border border-gray-300 bg-gray-200 mt-3 px-3 py-2 text-center rounded-lg text-xs text-gray-600 mb-2'>
          <p>Bu kampanya S.S. Bursa Eczacılar Kooperatifi Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quas nulla qui iusto itaque. In consequuntur unde, commodi perspiciatis doloribus atque dolor sunt mollitia ipsum, nulla quos delectus veritatis vitae placeat fugiat ducimus qui quas, iste quibusdam error? Incidunt, voluptates inventore! Consectetur nihil aliquid doloribus debitis iusto non reiciendis reprehenderit.</p>
          <p className='text-blue-500 cursor-pointer'>Çekiliş şartlarını öğrenmek için tıklayınız.</p>
