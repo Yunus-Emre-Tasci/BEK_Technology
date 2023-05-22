@@ -19,8 +19,8 @@ const Home=({items})=>{
 
   console.log(items);
  
-  // const ids=items.map((i)=>i.id)
-  // const titles = items.map((i) => i.title)
+  const ids=items.map((i)=>i.id)
+  const titles = items.map((i) => i.title)
   const urls= items.map((i) => i.url)
   const thumbnailUrls = items.map((i) => i.thumbnailUrl)
   
