@@ -90,7 +90,7 @@ const Sponsor = ({
       </div>
       </div>
       
-      <div className = 'flex flex-wrap mt-3 gap-x-6 gap-y-4' >
+      <div className = 'flex flex-wrap justify-center mt-3 gap-x-6 gap-y-4' >
         {
           sponsorData.map((sponsor,i)=>(
             <SponsorCard key={i} sponsor={sponsor} />
