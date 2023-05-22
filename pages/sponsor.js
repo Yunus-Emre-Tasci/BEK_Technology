@@ -41,7 +41,7 @@ const Sponsor = ({
     },
     {
       id: ids[3],
-      title: titles[3],
+      title: titles[5],
       model: "T 290",
       adet: 3,
       url: urls[3]
@@ -56,7 +56,7 @@ const Sponsor = ({
   ]
   
   return (
-    <main className = "w-[80%] mx-auto border mt-2" >
+    <main className = "w-[80%] mx-auto  mt-2" >
       <Head>
         <title>Sponsor | BEK Technology</title>
       </Head>
@@ -80,17 +80,17 @@ const Sponsor = ({
             alt=""
           />
       </Link>
-      <div className='flex items-center justify-between px-2 mt-4'>
-        <Link Link href = "/"
-        className = 'flex items-center justify-center px-3 py-2 border-2 border-gray-300 rounded-lg' >
+      <div className = 'flex items-center justify-between px-2 mt-4' >
+        <Link href = "/"
+        className = 'flex items-center justify-center px-3 py-2 border-2 border-gray-300 rounded-lg shadow-md' >
         < AiFillPlayCircle/>
         <p className='ml-2'>Ana Ekrana Dön</p>
         </Link>
-        <p>Sponsorlar Ürün Listesi</p>
+        <p className='tracking-wide'>Sponsorlar Ürün Listesi</p>
       </div>
       </div>
       
-      <div className = 'flex flex-wrap justify-center mt-3 gap-x-6 gap-y-4' >
+      <div className = 'flex flex-wrap mt-3 gap-x-6 gap-y-4' >
         {
           sponsorData.map((sponsor,i)=>(
             <SponsorCard key={i} sponsor={sponsor} />
