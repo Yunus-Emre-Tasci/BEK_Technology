@@ -56,18 +56,21 @@ const Sponsor = ({
   ]
   
   return (
-    <main className="w-[80%] mx-auto border mt-2">
+    <main className = "w-[80%] mx-auto border mt-2" >
       <Head>
         <title>Sponsor | BEK Technology</title>
       </Head>
 
-      <div>
+      <div className='pb-2 border-b-2'>
       <Link className = 'inline-block pl-2 '
       href = "https://bek.org.tr/kuruluslar/bek-teknoloji"
       target = "_blank" >
           <Image
           width={100}
           height={100}
+          priority = {
+            true
+          }
            style = {
              {
                objectFit: "contain"
@@ -87,7 +90,7 @@ const Sponsor = ({
       </div>
       </div>
       
-      <div>
+      <div className = 'flex flex-wrap mt-3 gap-x-6 gap-y-4' >
         {
           sponsorData.map((sponsor,i)=>(
             <SponsorCard key={i} sponsor={sponsor} />
