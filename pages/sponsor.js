@@ -97,6 +97,10 @@ const Sponsor = ({
           ))
         }
       </div>
+      <div className='border border-gray-300 bg-gray-200 mt-3 px-3 py-2 text-center rounded-lg text-xs text-gray-600 mb-2'>
+         <p>Bu kampanya S.S. Bursa Eczacılar Kooperatifi Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quas nulla qui iusto itaque. In consequuntur unde, commodi perspiciatis doloribus atque dolor sunt mollitia ipsum, nulla quos delectus veritatis vitae placeat fugiat ducimus qui quas, iste quibusdam error? Incidunt, voluptates inventore! Consectetur nihil aliquid doloribus debitis iusto non reiciendis reprehenderit.</p>
+         <p className='text-blue-500 cursor-pointer'>Çekiliş şartlarını öğrenmek için tıklayınız.</p>
+      </div>
       
     </main>
   )

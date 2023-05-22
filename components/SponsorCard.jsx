@@ -5,7 +5,7 @@ const SponsorCard = ({ sponsor }) => {
 
   console.log(sponsor);
   return (
-    <div className="border border-gray-300 rounded-t-lg shadow-md border-1 w-[250px] h-[285px]">
+    <div className="border border-gray-300 rounded-lg shadow-md border-1 w-[250px] h-[285px]">
       <div className="p-2 mx-auto">
         <Image
           src={sponsor.url}
