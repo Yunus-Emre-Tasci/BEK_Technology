@@ -17,7 +17,7 @@ const Home=({items})=>{
   };
 
 
-  console.log(items);
+  // console.log(items);
  
   const ids=items.map((i)=>i.id)
   const titles = items.map((i) => i.title)

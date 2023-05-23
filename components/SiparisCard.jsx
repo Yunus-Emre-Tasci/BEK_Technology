@@ -1,7 +1,8 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addToCart,removeFromCart } from "@/redux/store";
+// import { addToCart,removeFromCart } from "@/redux/store";
+import { addToCart, removeFromCart } from "../redux/cartSlice";
 
 const SiparisCard = ({ siparis }) => {
 
@@ -39,19 +40,19 @@ const SiparisCard = ({ siparis }) => {
           {siparis.adet} Adet
         </p>
 
-        <div className="flex justify-between items-center mt-3 pb-2 mb-3">
+        <div className="flex items-center justify-between pb-2 mt-3 mb-3">
           <p className="font-bold text-[13px]"> {siparis.puan} BEK Puan </p>
           <div className="flex gap-x-2 justify-evenly items-center rounded-full py-1 text-[14px] border-2 border-gray-200 px-4">
             <button
               onClick={handleRemoveFromCart}
-              className="w-5 h-5 flex justify-center items-center rounded-full border-2 border-gray-200 text-lg "
+              className="flex items-center justify-center w-5 h-5 text-lg border-2 border-gray-200 rounded-full "
             >
               -
             </button>
             <p className="text-md">0</p>
             <button
               onClick={handleAddToCart}
-              className="w-5 h-5 flex justify-center items-center rounded-full border-2 border-gray-200 text-lg"
+              className="flex items-center justify-center w-5 h-5 text-lg border-2 border-gray-200 rounded-full"
             >
               +
             </button>
