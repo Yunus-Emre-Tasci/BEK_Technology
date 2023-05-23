@@ -23,5 +23,6 @@
 } */
 
 body{
-  background: linear-gradient(to right, #ffeeee, #ddefbb);
+  /* background: linear-gradient(to right, #ffeeee, #ddefbb); */
+  background: linear-gradient(to right, #ece9e6, #ffffff);
 }

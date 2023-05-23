@@ -7,7 +7,7 @@ export default function Document() {
         
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
       </Head>
-      <body className = ' bg-gray-100 dark:bg-[#23242a] font-roboto' >
+      <body className = ' bg-gradient-to-r from-[#ece9e6] to-white dark:bg-[#23242a] font-roboto' >
         <Main />
         <NextScript />
       </body>
