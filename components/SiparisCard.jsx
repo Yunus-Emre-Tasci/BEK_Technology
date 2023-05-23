@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import Image from "next/image";
 
 const SiparisCard = ({ siparis }) => {
@@ -17,9 +16,9 @@ const SiparisCard = ({ siparis }) => {
           {siparis.adet} Adet
         </p>
 
-        <div className="flex justify-between items-center mt-2 pb-2 mb-3">
+        <div className="flex justify-between items-center mt-3 pb-2 mb-3">
           <p className="font-bold text-[13px]"> {siparis.puan} BEK Puan </p>
-          <div className="flex gap-x-2 justify-evenly items-center rounded-full p-2 text-[14px] border-2 border-gray-200 px-4">
+          <div className="flex gap-x-2 justify-evenly items-center rounded-full py-1 text-[14px] border-2 border-gray-200 px-4">
             <button className="w-5 h-5 flex justify-center items-center rounded-full border-2 border-gray-200 text-lg  ">
               -
             </button>
