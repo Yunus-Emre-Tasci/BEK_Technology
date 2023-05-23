@@ -8,6 +8,9 @@ const SiparisContent = ({ filteredCards }) => {
 
   const cartItems = useSelector((state) => state.cart);
   console.log(cartItems);
+  const {totalPoints}=cartItems
+
+  const kalanPuan=BEK_PUAN-totalPoints
 
   return (
     <div className="flex">
@@ -18,27 +21,29 @@ const SiparisContent = ({ filteredCards }) => {
       </div>
       <div className="w-[25%] mt-2 relative">
         <div className="shadow-lg">
-          <div className="mt-2 bg-gradient-to-r from-blue-700 to-blue-500 font-extrabold text-white p-2 rounded-lg">
+          <div className="p-2 mt-2 font-extrabold text-white rounded-lg bg-gradient-to-r from-blue-700 to-blue-500">
             BEK Puanınız:
           </div>
-          <div className="absolute right-0 top-0  z-10 text-blue-700 border-2 border-blue-700 bg-gray-100 text-xl rounded-xl p-3 font-extrabold shadow-lg">
+          <div className="absolute top-0 right-0 z-10 p-3 text-xl font-extrabold text-blue-700 bg-gray-100 border-2 border-blue-700 shadow-lg rounded-xl">
             {BEK_PUAN}
           </div>
         </div>
         <div className="mt-10 border-2 border-gray-300 rounded-md">
-          <div className="flex font-bold justify-between items-center py-2 px-3 bg-gray-300 border-b-2 border-gray-300">
+          <div className="flex items-center justify-between px-3 py-2 font-bold bg-gray-300 border-b-2 border-gray-300">
             <p>Sepetiniz</p>
             <SlBasket />
           </div>
           <div className="p-4">
             <p className="font-extrabold text-[15px]">
-              Toplam Sepet Puan: 0 BEK Puan
+              Sepet Puanı: {totalPoints} BEK Puan
             </p>
-            <p className="mt-2 text-[14px]">Kalan Sepet Puanı: 0</p>
+            <p className="mt-2 text-[14px]">Kalan BEK Puanınız: {kalanPuan} </p>
           </div>
         </div>
-        <div className='mt-3'>
-            <button className='text-center bg-orange-600 text-white w-full p-2 rounded-md'>Siparişi Tamamla</button>
+        <div className="mt-3">
+          <button className="w-full p-2 text-center text-white bg-orange-600 rounded-md">
+            Siparişi Tamamla
+          </button>
         </div>
       </div>
     </div>

@@ -49,7 +49,7 @@ const SiparisCard = ({ siparis }) => {
             >
               -
             </button>
-            <p className="text-md">0</p>
+            <p className="text-md"> {count} </p>
             <button
               onClick={handleAddToCart}
               className="flex items-center justify-center w-5 h-5 text-lg border-2 border-gray-200 rounded-full"
