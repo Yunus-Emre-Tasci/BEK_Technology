@@ -9,11 +9,13 @@ import {
   persistStore
 } from 'redux-persist';
 import {
-  configureStore
+  configureStore, getDefaultMiddleware
 } from '@reduxjs/toolkit';
 import {
   createWrapper
 } from 'next-redux-wrapper';
+// import thunkMiddleware from 'redux-thunk';
+import thunk from 'redux-thunk';
 import cartReducer from "../redux/store"
 
 // export default function App({ Component, pageProps }) {
@@ -21,8 +23,18 @@ import cartReducer from "../redux/store"
 // }
 
 const makeStore = () => {
+
+  // const middleware = [...getDefaultMiddleware(), thunkMiddleware];
+
+  const middleware = [...getDefaultMiddleware({
+    thunk
+  }), thunk];
+
+ // redux-thunk middleware'ini middleware listesine ekleyin
+
   const store = configureStore({
     reducer: cartReducer,
+    middleware
   });
 
   const persistor = persistStore(store); // Store'u persist etmek için persistor oluşturun

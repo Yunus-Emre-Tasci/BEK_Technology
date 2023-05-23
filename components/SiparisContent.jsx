@@ -2,8 +2,13 @@ import React from 'react'
 import SiparisCard from './SiparisCard';
 import {SlBasket} from "react-icons/sl"
 import { BEK_PUAN } from '@/Data';
+import { useSelector } from "react-redux";
 
 const SiparisContent = ({ filteredCards }) => {
+
+  const cartItems = useSelector((state) => state.cart);
+  console.log(cartItems);
+
   return (
     <div className="flex">
       <div className="w-[75%] flex flex-wrap mt-3 gap-x-6 gap-y-4">
