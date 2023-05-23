@@ -1,5 +1,7 @@
 export const END_POINT = "https://jsonplaceholder.typicode.com/photos"
 
+export const BEK_PUAN=1000
+
 export const images = [{
         id: 1,
         src: "https://bek.org.tr/files/img/bwxumoow.jpg",

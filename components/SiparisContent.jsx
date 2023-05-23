@@ -1,5 +1,7 @@
 import React from 'react'
 import SiparisCard from './SiparisCard';
+import {SlBasket} from "react-icons/sl"
+import { BEK_PUAN } from '@/Data';
 
 const SiparisContent = ({ filteredCards }) => {
   return (
@@ -15,14 +17,23 @@ const SiparisContent = ({ filteredCards }) => {
             BEK Puanınız:
           </div>
           <div className="absolute right-0 top-0  z-10 text-blue-700 border-2 border-blue-700 bg-gray-100 text-xl rounded-xl p-3 font-extrabold shadow-lg">
-            100
+            {BEK_PUAN}
           </div>
         </div>
-        <div className='mt-5'>
-          <div className='flex justify-between items-center p-2 bg-gray-300 border-b-2'>
-             <p>Sepetiniz</p>
-             
+        <div className="mt-10 border-2 border-gray-300 rounded-md">
+          <div className="flex font-bold justify-between items-center py-2 px-3 bg-gray-300 border-b-2 border-gray-300">
+            <p>Sepetiniz</p>
+            <SlBasket />
           </div>
+          <div className="p-4">
+            <p className="font-extrabold text-[15px]">
+              Toplam Sepet Puan: 0 BEK Puan
+            </p>
+            <p className="mt-2 text-[14px]">Kalan Sepet Puanı: 0</p>
+          </div>
+        </div>
+        <div className='mt-3'>
+            <button className='text-center bg-orange-600 text-white w-full p-2 rounded-md'>Siparişi Tamamla</button>
         </div>
       </div>
     </div>
