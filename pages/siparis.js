@@ -30,21 +30,21 @@ const Siparis = ({
       },
       {
         id: ids[1],
-        title: titles[1],
+        title: titles[6],
         puan: 320,
         adet: 10,
         url: urls[1]
       },
       {
         id: ids[2],
-        title: titles[2],
+        title: titles[4],
         puan: 150,
-        adet: 25,
+        adet: 20,
         url: urls[2]
       },
       {
         id: ids[3],
-        title: titles[5],
+        title: titles[6],
         puan: 265,
         adet: 20,
         url: urls[3]
