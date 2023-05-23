@@ -1,6 +1,29 @@
 import Image from "next/image";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addToCart,removeFromCart } from "@/redux/store";
 
 const SiparisCard = ({ siparis }) => {
+
+  const dispatch = useDispatch();
+  const [count, setCount] = useState(0); 
+
+  const handleAddToCart = () => {
+    const increment = 1; // Eklenecek ürünün adet sayısı
+    const { id, puan } = siparis;
+    dispatch(addToCart({ id, count: increment, rating: puan }));
+    setCount(count + increment); // count state'ini güncelle
+  };
+
+  const handleRemoveFromCart = () => {
+    if (count > 0) {
+      const decrement = 1; // Çıkarılacak ürünün adet sayısı
+      const { id, puan } = siparis;
+      dispatch(removeFromCart({ id, count: decrement, rating: puan }));
+      setCount(count - decrement); // count state'ini güncelle
+    }
+  };
+
   return (
     <div className="border border-gray-300 rounded-lg shadow-md border-1 w-[250px] h-[295px]">
       <div className="p-2 mx-auto">
@@ -19,11 +42,17 @@ const SiparisCard = ({ siparis }) => {
         <div className="flex justify-between items-center mt-3 pb-2 mb-3">
           <p className="font-bold text-[13px]"> {siparis.puan} BEK Puan </p>
           <div className="flex gap-x-2 justify-evenly items-center rounded-full py-1 text-[14px] border-2 border-gray-200 px-4">
-            <button className="w-5 h-5 flex justify-center items-center rounded-full border-2 border-gray-200 text-lg  ">
+            <button
+              onClick={handleRemoveFromCart}
+              className="w-5 h-5 flex justify-center items-center rounded-full border-2 border-gray-200 text-lg "
+            >
               -
             </button>
             <p className="text-md">0</p>
-            <button className="w-5 h-5 flex justify-center items-center rounded-full border-2 border-gray-200 text-lg">
+            <button
+              onClick={handleAddToCart}
+              className="w-5 h-5 flex justify-center items-center rounded-full border-2 border-gray-200 text-lg"
+            >
               +
             </button>
           </div>
