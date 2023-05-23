@@ -11,7 +11,7 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action) => {
-      const { id, name, count, rating } = action.payload;
+      const { id, count, rating } = action.payload;
       state.cartItems.push({ id, count, rating });
       state.totalPoints += count * rating;
     //   const existingItem = state.find((item) => item.id === id);

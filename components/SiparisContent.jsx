@@ -6,11 +6,19 @@ import { useSelector } from "react-redux";
 
 const SiparisContent = ({ filteredCards }) => {
 
-  const cartItems = useSelector((state) => state.cart);
-  console.log(cartItems);
-  const {totalPoints}=cartItems
+  const {totalPoints} = useSelector((state) => state.cart);
 
   const kalanPuan=BEK_PUAN-totalPoints
+
+  const handleSubmit=()=>{
+    if(kalanPuan<0){
+      alert(`Limitinizi aştınız, lütfen sepetinizden ${kalanPuan*-1} puan kadarıyla ürün çıkarınız!.Ya da daha fazla satış yaparak BEK Puanınızı arttırabilirsiniz.`);
+    }else if(kalanPuan==BEK_PUAN){
+      alert("Sepetinizde ürün bulunmamaktadır!")
+    }else{
+      alert(`Siparişleriniz Hazırlanıyor,isterseniz daha kullanabileceğiniz ${kalanPuan} puanınız bulunmakta!`);
+    }
+  }
 
   return (
     <div className="flex">
@@ -41,7 +49,7 @@ const SiparisContent = ({ filteredCards }) => {
           </div>
         </div>
         <div className="mt-3">
-          <button className="w-full p-2 text-center text-white bg-orange-600 rounded-md">
+          <button onClick={handleSubmit} className="w-full p-2 text-center text-white bg-orange-600 rounded-md">
             Siparişi Tamamla
           </button>
         </div>
