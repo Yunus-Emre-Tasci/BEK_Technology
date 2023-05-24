@@ -4,7 +4,7 @@ import {
 
 export const toastWarnNotify = (msg) => {
     toast.warn(msg, {
-        autoClose: 6000,
+        autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -16,7 +16,7 @@ export const toastWarnNotify = (msg) => {
 
 export const toastErrorNotify = (msg) => {
     toast.error(msg, {
-        autoClose: 5000,
+        autoClose: 6000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,

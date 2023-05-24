@@ -13,13 +13,13 @@ const SiparisContent = ({ filteredCards }) => {
 
   const handleSubmit=()=>{
     if(kalanPuan<0){
-      toastWarnNotify(
+      toastErrorNotify(
         `Limitinizi aştınız! Lütfen sepetinizden ${
           kalanPuan * -1
         } puan kadarıyla ürün çıkarınız. Ya da daha fazla satış yaparak BEK Puanınızı arttırabilirsiniz.`
       );
     }else if(kalanPuan==BEK_PUAN){
-      toastErrorNotify("Sepetinizde ürün bulunmamaktadır! 🙁");
+      toastWarnNotify("Sepetinizde ürün bulunmamaktadır! 🙁");
     }else{
       toastSuccessNotify(
         `Siparişleriniz Hazırlanıyor 😊 İsterseniz kullanabileceğiniz ${kalanPuan} puanınız daha bulunmakta!`
