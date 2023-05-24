@@ -7,7 +7,7 @@ import { toastErrorNotify, toastSuccessNotify, toastWarnNotify } from '@/helpers
 
 const SiparisContent = ({ filteredCards }) => {
 
-  const {totalPoints} = useSelector((state) => state.cart);
+  const { totalPoints } = useSelector((state) => state.bek);
 
   const kalanPuan=BEK_PUAN-totalPoints
 

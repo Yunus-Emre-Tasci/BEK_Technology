@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 // import { addToCart,removeFromCart } from "@/redux/store";
 import { addToCart, removeFromCart } from "../redux/cartSlice";

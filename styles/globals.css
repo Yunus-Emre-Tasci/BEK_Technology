@@ -14,14 +14,12 @@ html,body{
 
 
 ::-webkit-scrollbar-thumb{
-  /* background-image: linear-gradient(to right bottom,#f97316,#63A4F6); */
   background-color:rgba(0, 0, 0, 0.61)
 }
 
 ::-webkit-scrollbar{
   width: 8px;
   height: 10px;
-  /* background-image: linear-gradient(to right bottom,#f97316,#63A4F6) */
   background-color:wheat
 }
 
