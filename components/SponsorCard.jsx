@@ -16,7 +16,7 @@ const SponsorCard = ({ sponsor }) => {
             width={230}
             style={{ height: "150px" }}
           />
-          <h3 className="mt-2 font-extrabold"> {sponsor.title} </h3>
+          <h3 className="mt-2 font-extrabold dark:text-white"> {sponsor.title} </h3>
           <p className="mt-1"> {sponsor.model} </p>
           <p className="text-[12px] font-bold mt-2 pb-2">
             {" "}
