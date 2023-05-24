@@ -106,7 +106,7 @@ const Siparis = ({
          <Link href = "/"
         className = 'flex items-center justify-center px-3 py-2 border-2 border-gray-300 rounded-lg shadow-md' >
            < AiFillPlayCircle/>
-           <p className='ml-2 text-sm md:text-base '>Ana Ekrana Dön</p>
+           <p className='ml-2 text-sm tracking-wide md:text-base'>Ana Ekrana Dön</p>
          </Link>
          <div className='border-2 border-gray-300 shadow-md rounded-lg flex justify-between items-center w-[80%] py-2 px-3 ml-1'>
            < input value = {

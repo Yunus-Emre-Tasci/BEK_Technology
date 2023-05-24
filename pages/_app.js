@@ -70,6 +70,7 @@ import Switch from '@/components/Switch';
 
 export default function App({ Component, pageProps }) {
   return (
+    <div className='bg-gradient-to-r from-[#ece9e6] to-white dark:bg-[#23242a]'>
     <StoreProvider>
       <ToastContainer/>
       < Component {
@@ -78,5 +79,6 @@ export default function App({ Component, pageProps }) {
       />
       <Switch/>
     </StoreProvider>
+    </div>
   )
 }

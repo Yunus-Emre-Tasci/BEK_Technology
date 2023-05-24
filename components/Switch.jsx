@@ -17,8 +17,12 @@ const Switch = () => {
 
     if (darkMode) {
     document.documentElement.classList.add("dark");
+    document.body.style.backgroundColor = "black";
+    document.documentElement.style.backgroundColor = "black";
   } else {
     document.documentElement.classList.remove("dark");
+    document.body.style.backgroundColor = "white";
+    document.documentElement.style.backgroundColor = "white";
   }
   
   }, [darkMode]);

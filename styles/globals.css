@@ -8,6 +8,10 @@
   padding: 0;
 }
 
+html,body{
+  height: 100vh;
+}
+
 
 ::-webkit-scrollbar-thumb{
   background-image: linear-gradient(to right bottom,#f97316,#63A4F6);
