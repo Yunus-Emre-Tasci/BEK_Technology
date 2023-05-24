@@ -6,9 +6,6 @@ import {
 } from "react-toastify";
 import ScrollToTop from '@/components/ScrollToTop';
 // import Switch from '@/components/Switch';
-
-
-// import {
 //   Provider
 // } from 'react-redux';
 // import {

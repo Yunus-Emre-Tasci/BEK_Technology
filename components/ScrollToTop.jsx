@@ -27,7 +27,7 @@ const ScrollToTop = ({show}) => {
     return () => {
       window.removeEventListener("scroll", toggleVisible);
     };
-  }, []); // Boş dizi ekledim, böylece sadece komponent monte olduğunda olay dinleyicisi eklenir ve temizlenir.
+  }, []); // Boş dizi ekledim, böylece sadece komponent mount olduğunda olay dinleyicisi eklenir ve temizlenir.
 
   return (
     <div className="fixed w-100 bottom-20 h-4 left-[91vw] text-5xl z-1 cursor-pointer text-red-400 hover:text-red-600 dark:text-white dark:hover:text-gray-600">

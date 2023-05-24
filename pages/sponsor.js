@@ -1,12 +1,8 @@
 import Head from 'next/head'
-// import Image from 'next/image'
-// import Link from 'next/link'
-// import { AiFillPlayCircle } from 'react-icons/ai'
 import {
   getStaticProps
 } from "@/API";
 import SponsorContent from '@/components/SponsorContent';
-// import SponsorCard from '@/components/SponsorCard'
 
 const Sponsor = ({
     items
@@ -15,8 +11,7 @@ const Sponsor = ({
   const ids = items.map((i) => i.id)
   const titles = items.map((i) => i.title)
   const urls = items.map((i) => i.url)
-  // const thumbnailUrls = items.map((i) => i.thumbnailUrl) 
-  
+
   const sponsorData=[
     {
       id:ids[0],

@@ -1,4 +1,3 @@
-import React from 'react'
 import SiparisCard from './SiparisCard';
 import {SlBasket} from "react-icons/sl"
 import { BEK_PUAN } from '@/Data';
@@ -7,7 +6,7 @@ import { toastErrorNotify, toastSuccessNotify, toastWarnNotify } from '@/helpers
 
 const SiparisContent = ({ filteredCards }) => {
 
-  const { totalPoints } = useSelector((state) => state.bek);
+  const { totalPoints } = useSelector((state) => state.cart);
 
   const kalanPuan=BEK_PUAN-totalPoints
 

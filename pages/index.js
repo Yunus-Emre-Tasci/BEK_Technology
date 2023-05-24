@@ -4,7 +4,7 @@ import { getStaticProps } from "@/API";
 
 import Story from "@/components/Story";
 import Sidebar from "@/components/Sidebar";
-import Content from "@/components/Content";
+import IndexContent from "@/components/IndexContent";
 
 import Head from "next/head";
 
@@ -32,7 +32,7 @@ const Home=({items})=>{
   <Story thumbnailUrls = {thumbnailUrls}/>
   
   <div className="flex h-full p-2">
-    <Content urls = {urls}/>
+    <IndexContent urls = {urls}/>
     <Sidebar toggleMenu = {toggleMenu} isOpen = {isOpen}/>
   </div>
   

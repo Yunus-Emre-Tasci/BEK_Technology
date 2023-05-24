@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-// import { addToCart,removeFromCart } from "@/redux/store";
 import { addToCart, removeFromCart } from "../redux/cartSlice";
 
 const SiparisCard = ({ siparis }) => {
