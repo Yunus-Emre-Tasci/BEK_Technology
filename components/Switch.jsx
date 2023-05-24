@@ -1,6 +1,7 @@
-import { setDarkMode } from "@/redux/cartSlice";
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+"use client"
+// import { setDarkMode } from "@/redux/cartSlice";
+import { useEffect, useState } from "react";
+// import { useDispatch, useSelector } from "react-redux";
 
 
 const Switch = () => {
@@ -8,12 +9,30 @@ const Switch = () => {
   // const [darkMode, setDarkMode] = useState(
   //   localStorage.getItem("color-theme") === "dark" ? true : false
   // );
+  const [darkMode, setDarkMode] = useState(false);
 
-  const dispatch = useDispatch();
+  useEffect(() => {
+    const colorTheme = localStorage.getItem("color-theme");
+    setDarkMode(colorTheme === "dark");
+
+    if (darkMode) {
+    document.documentElement.classList.add("dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+  }
+  
+  }, [darkMode]);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    localStorage.setItem('color-theme', darkMode ? '' : 'dark');
+  };
+
+  // const dispatch = useDispatch();
 
   //! darkMode state'ini redux'dan çekiyoruz.CONSUMİNG. Bunun için useSelector Hook'unu kullanıyoruz.
 
-  const { darkMode } = useSelector((state) => state.cart);
+  // const { darkMode } = useSelector((state) => state.cart);
 
   // darkMode
   // ? localStorage.setItem("color-theme", "")
@@ -21,21 +40,24 @@ const Switch = () => {
 
   // On page load or when changing themes, best to add inline in `head` to avoid FOUC
 
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-      document.documentElement.style.backgroundColor = "#23242a";
-    } else {
-      document.documentElement.classList.remove("dark");
-      document.documentElement.style.backgroundColor =
-        "linear-gradient(to right, #ece9e6, white)";
-    }
-  }, [darkMode]);
-  
+  // useEffect(() => {
+    // if (darkMode) {
+      // document.documentElement.classList.remove("dark");
+      // document.body.style.backgroundColor =
+        // "linear-gradient(to right, #ece9e6, white)"; 
+      // document.documentElement.style.backgroundColor =
+        // "linear-gradient(to right, #ece9e6, white)";
+    // } else {
+      // document.documentElement.classList.add("dark");
+      // document.body.style.backgroundColor = "#23242a"; 
+      // document.documentElement.style.backgroundColor = "#23242a";
+    // }
+  // }, [darkMode]);
+  // 
   // if (darkMode) {
-  //   document.documentElement.classList.add("dark");
+    // document.documentElement.classList.add("dark");
   // } else {
-  //   document.documentElement.classList.remove("dark");
+    // document.documentElement.classList.remove("dark");
   // }
 
   return (
@@ -44,7 +66,8 @@ const Switch = () => {
         type="button"
         data-testid="togglebutton"
         title="Toggle dark/light mode"
-        onClick={() => dispatch(setDarkMode(!darkMode))}
+        // onClick={() => dispatch(setDarkMode(!darkMode))}
+        onClick={toggleDarkMode}
         className="flex items-center p-3 mr-2 text-xs font-medium text-gray-700 bg-white border border-gray-200 rounded-lg toggle-dark-state-example hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-500 dark:bg-gray-800 focus:outline-none dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
       >
         {darkMode ? (

@@ -43,7 +43,7 @@ const SiparisContent = ({ filteredCards }) => {
             {BEK_PUAN}
           </div>
         </div>
-        <div className="mt-10 border-2 border-gray-300 rounded-md">
+        <div className="mt-10 border-2 border-gray-300 rounded-md shadow-md">
           <div className="flex items-center justify-between px-3 py-2 font-bold bg-gray-300 border-b-2 border-gray-300">
             <p>Sepetiniz</p>
             <SlBasket />
@@ -55,7 +55,7 @@ const SiparisContent = ({ filteredCards }) => {
             <p className="mt-2 text-[14px]">Kalan BEK Puanınız: {kalanPuan} </p>
           </div>
         </div>
-        <div className="mt-3">
+        <div className="mt-3 shadow-md">
           <button onClick={handleSubmit} className="w-full p-2 text-center text-white bg-orange-600 rounded-md">
             Siparişi Tamamla
           </button>
