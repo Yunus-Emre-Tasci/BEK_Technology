@@ -8,9 +8,6 @@
   padding: 0;
 }
 
-/* html,body{
-  height: 100%;
-} */
 
 ::-webkit-scrollbar-thumb{
   background-image: linear-gradient(to right bottom,#f97316,#63A4F6);

@@ -24,8 +24,11 @@ const Switch = () => {
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
+      document.documentElement.style.backgroundColor = "#23242a";
     } else {
       document.documentElement.classList.remove("dark");
+      document.documentElement.style.backgroundColor =
+        "linear-gradient(to right, #ece9e6, white)";
     }
   }, [darkMode]);
   
