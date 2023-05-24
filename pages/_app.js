@@ -4,7 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 import {
   ToastContainer
 } from "react-toastify";
-import Switch from '@/components/Switch';
+// import Switch from '@/components/Switch';
 
 
 // import {
@@ -70,14 +70,14 @@ import Switch from '@/components/Switch';
 
 export default function App({ Component, pageProps }) {
   return (
-    <div className='bg-gradient-to-r from-[#ece9e6] to-white dark:bg-[#23242a]'>
+    <div className="bg-gradient-to-r from-[#ece9e6] to-white dark:bg-bg-gray-700" >
     <StoreProvider>
       <ToastContainer/>
       < Component {
         ...pageProps
       }
       />
-      <Switch/>
+      {/* <Switch/> */}
     </StoreProvider>
     </div>
   )

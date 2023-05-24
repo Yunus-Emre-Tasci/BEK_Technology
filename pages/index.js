@@ -24,7 +24,7 @@ const Home=({items})=>{
   
 
   return (
-<main className="w-[80%] mx-auto " >
+<main  className = "w-[80%] mx-auto" >
   <Head>
     <title>Home | BEK Technology</title>
   </Head>
