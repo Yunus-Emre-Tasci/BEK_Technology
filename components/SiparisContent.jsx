@@ -3,6 +3,7 @@ import SiparisCard from './SiparisCard';
 import {SlBasket} from "react-icons/sl"
 import { BEK_PUAN } from '@/Data';
 import { useSelector } from "react-redux";
+import { toastErrorNotify, toastSuccessNotify, toastWarnNotify } from '@/helpers/ToastNotify';
 
 const SiparisContent = ({ filteredCards }) => {
 
@@ -12,11 +13,17 @@ const SiparisContent = ({ filteredCards }) => {
 
   const handleSubmit=()=>{
     if(kalanPuan<0){
-      alert(`Limitinizi aştınız, lütfen sepetinizden ${kalanPuan*-1} puan kadarıyla ürün çıkarınız!.Ya da daha fazla satış yaparak BEK Puanınızı arttırabilirsiniz.`);
+      toastWarnNotify(
+        `Limitinizi aştınız! Lütfen sepetinizden ${
+          kalanPuan * -1
+        } puan kadarıyla ürün çıkarınız. Ya da daha fazla satış yaparak BEK Puanınızı arttırabilirsiniz.`
+      );
     }else if(kalanPuan==BEK_PUAN){
-      alert("Sepetinizde ürün bulunmamaktadır!")
+      toastErrorNotify("Sepetinizde ürün bulunmamaktadır! 🙁");
     }else{
-      alert(`Siparişleriniz Hazırlanıyor,isterseniz daha kullanabileceğiniz ${kalanPuan} puanınız bulunmakta!`);
+      toastSuccessNotify(
+        `Siparişleriniz Hazırlanıyor 😊 İsterseniz kullanabileceğiniz ${kalanPuan} puanınız daha bulunmakta!`
+      );
     }
   }
 

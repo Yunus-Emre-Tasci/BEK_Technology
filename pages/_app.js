@@ -1,5 +1,10 @@
 import { StoreProvider } from '@/redux/store-provider'
 import '@/styles/globals.css'
+import "react-toastify/dist/ReactToastify.css";
+import {
+  ToastContainer
+} from "react-toastify";
+import Switch from '@/components/Switch';
 
 
 // import {
@@ -66,10 +71,12 @@ import '@/styles/globals.css'
 export default function App({ Component, pageProps }) {
   return (
     <StoreProvider>
+      <ToastContainer/>
       < Component {
         ...pageProps
       }
       />
+      <Switch/>
     </StoreProvider>
   )
 }
