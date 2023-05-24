@@ -57,7 +57,7 @@ const Sponsor = ({
   ]
   
   return (
-    <main className = "w-[80%] mx-auto dark:bg-gray-700 dark:text-white mt-2" >
+    <main className = "w-[80%] mx-auto dark:bg-gray-700 dark:text-white mt-2 pb-2" >
       <Head>
         <title>Sponsor | BEK Technology</title>
       </Head>
@@ -66,7 +66,7 @@ const Sponsor = ({
        <SponsorContent sponsorData = {sponsorData}/>
       </div>
 
-      <div className='px-3 py-2 mt-3 text-xs text-center text-gray-600 bg-gray-200 border-gray-300 rounded-lg dark:bg-gray-800 -border'>
+      <div className='px-3 py-2 text-xs text-center text-gray-600 bg-gray-200 border border-gray-300 rounded-lg dark:bg-gray-800'>
          <p>Bu kampanya S.S. Bursa Eczacılar Kooperatifi Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quas nulla qui iusto itaque. In consequuntur unde, commodi perspiciatis doloribus atque dolor sunt mollitia ipsum, nulla quos delectus veritatis vitae placeat fugiat ducimus qui quas, iste quibusdam error? Incidunt, voluptates inventore! Consectetur nihil aliquid doloribus debitis iusto non reiciendis reprehenderit.</p>
          <p className='text-blue-500 cursor-pointer'>Çekiliş şartlarını öğrenmek için tıklayınız.</p>
       </div>
